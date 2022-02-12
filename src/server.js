@@ -30,6 +30,8 @@ app.use(
 app.use((req, res, next) => {
     res.header("Cross-Origin-Embedder-Policy", "require-corp");
     res.header("Cross-Origin-Opener-Policy", "same-origin");
+    res.header("cross-origin-resource-Policy", "cross-origin");
+    res.header("Access-Control-Allow-Credentials", "true");
     next();
 })
 app.use(flash());
